@@ -8,6 +8,7 @@
 /* колір тексту - #757575 */
 /* додатковий колір тексту - #FFFFFF */
 /* колір тексту із прозорістю - rgba(255, 255, 255, 0.6) */
+/* колір лінії - #ECECEC */
 /* ?Raleway 700, Roboto 400 500 700 900 */
 
 /* css змінні */
@@ -25,8 +26,45 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
+
+header {
+  border-bottom: 1px solid #ececec;
+}
+
 footer {
   background-color: #2f303a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .container {
@@ -35,7 +73,19 @@ footer {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
+}
+
+/* =============Хедер============== */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -46,13 +96,25 @@ footer {
   font-size: 26px;
   line-height: 1.19;
 }
+
 .logo-header {
   color: #212121;
 }
-.logo-footer {
-  color: var(--base-color);
+
+.list-nav {
+  display: flex;
+  margin-left: 93px;
 }
-.list-nav a {
+
+.list-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.list-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--heading-color);
 
   font-weight: 500;
@@ -60,11 +122,25 @@ footer {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.list-nav a:hover,
-.list-nav a:focus {
+
+.list-nav .link:hover,
+.list-nav .link:focus {
   color: var(--akcent-color);
 }
-.contacts-header a {
+
+.contacts-header {
+  display: flex;
+}
+
+.contacts-header .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts-header .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--text-color);
 
   font-style: normal;
@@ -73,47 +149,53 @@ footer {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contacts-header a:hover,
-.contacts-header a:focus {
+
+.contacts-header .link:hover,
+.contacts-header .link:focus {
   color: var(--akcent-color);
 }
-a.current {
+
+.link.current {
   color: var(--akcent-color);
-}
-.list {
-  list-style: none;
-}
-.link {
-  text-decoration: none;
 }
 
 /* =============герой============== */
 .hero {
   background-color: #2f303a;
+  text-align: center;
 }
+
 .hero-title {
   color: var(--base-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
 .hero-button {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+
   background-color: var(--akcent-color);
   color: var(--base-color);
   border: none;
   cursor: pointer;
+  display: block;
 
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
   letter-spacing: 0.06em;
 }
+
 .hero-button:hover,
 .hero-button:focus {
   background-color: #188ce8;
@@ -132,7 +214,22 @@ a.current {
   clip-path: inset(50%);
   margin: -1px;
 }
+
+.features-list {
+  display: flex;
+}
+
+.features-list .item {
+  width: 270px;
+}
+
+.features-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .features-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.43;
@@ -146,32 +243,67 @@ a.current {
 }
 
 /* =============чем мы занимаемся============= */
+.directions.section {
+  padding-top: 0;
+}
+
 .directions-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 
+.directions .list {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* =============команда============= */
 .team {
   background-color: #f5f4fa;
 }
+
 .team-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
+
 .team-list {
-  background-color: var(--base-color);
+  display: flex;
+  justify-content: space-between;
 }
+
+.team-list .item {
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: var(--base-color);
+  width: 270px;
+  padding-bottom: 30px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.pic {
+  margin-bottom: 30px;
+}
+
 .team-list-title {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
+
 .team-list-text {
   color: var(--text-color);
 
@@ -181,33 +313,68 @@ a.current {
 }
 
 /* =============футер============= */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-footer {
+  color: var(--base-color);
+}
+
 .address {
+  margin-top: 20px;
+
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
+
+.address-item .link {
+  display: block;
+}
+
 .address-map {
   color: var(--base-color);
 }
+
 .address-map:hover,
 .address-map:focus {
   color: var(--akcent-color);
 }
+
 .address-tel,
 .address-mail {
+  margin-top: 9px;
+
   color: rgba(255, 255, 255, 0.6);
 }
+
 .address-tel:hover,
 .address-tel:focus {
   color: var(--akcent-color);
 }
+
 .address-mail:hover,
 .address-mail:focus {
   color: var(--akcent-color);
 }
 
 /* =============портфолио============= */
+.filters {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
 .filters-btn {
+  height: 38px;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  border-radius: 4px;
+
   color: var(--heading-color);
   background-color: #f5f4fa;
   border: none;
@@ -220,15 +387,38 @@ a.current {
   text-align: center;
   letter-spacing: inherit;
 }
+
+.filters-list:not(:last-child) {
+  margin-right: 6px;
+}
+
 .filters-btn:hover,
 .filters-btn:focus {
   background-color: var(--akcent-color);
   color: var(--base-color);
 }
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .works-list {
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  flex-basis: calc((100% - 60px) / 3);
   background-color: var(--base-color);
 }
+
+.works-descr {
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-top: 20px;
+}
 .works-title {
+  margin-bottom: 4px;
   color: var(--heading-color);
 
   font-weight: 700;
