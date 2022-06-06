@@ -246,6 +246,7 @@ img {
   line-height: 1.43;
   text-transform: uppercase;
 }
+
 .features-text {
   color: var(--text-color);
 
@@ -431,6 +432,7 @@ footer {
   border: 1px solid #eeeeee;
   border-top: none;
 }
+
 .works-title {
   margin-bottom: 4px;
   color: var(--heading-color);
@@ -440,6 +442,7 @@ footer {
   line-height: 2;
   letter-spacing: 0.06em;
 }
+
 .works-text {
   color: var(--text-color);
 
