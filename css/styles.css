@@ -345,8 +345,13 @@ footer {
 
   font-style: normal;
   font-size: 14px;
-  line-height: 1.71;
+  /* line-height: 1.71; */
+  line-height: 1.5;
 }
+
+/* .address-list .item {
+  height: 21px;
+} */
 
 .address-list .item + .item {
   margin-top: 9px;
